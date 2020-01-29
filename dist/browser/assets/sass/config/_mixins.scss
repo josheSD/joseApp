@@ -1,0 +1,32 @@
+@mixin mediaquery($bp){
+    @if map-has-key($breakpoints,$bp){
+        @media screen and (min-width: map-get($breakpoints,$bp)){
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: $bp){
+            @content;
+        }
+    }
+}
+
+@mixin font($size){
+    font-size:nth(map-get($fonts,$size),1);
+    line-height: nth(map-get($fonts,$size),2);
+}
+
+@function themeBlack($property){
+    @if map-has-key($themeBlack, $property){
+         @return map-get($themeBlack,$property)
+    }
+    @warn "La propiedad #{$property} no se encontro en el map themeBlack";
+    @return null;
+};
+
+@function themeWhite($property){
+    @if map-has-key($themeWhite, $property){
+        @return map-get($themeWhite,$property)
+    }
+    @warn "La propiedad #{$property} no se encontro en el map themeWhite";
+    @return null;
+}

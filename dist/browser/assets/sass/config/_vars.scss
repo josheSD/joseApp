@@ -1,0 +1,61 @@
+// Custom Properties
+:root{
+    // Variables de apilamiento (z-index)
+    --z-back: -10;
+    --z-intermedio: 5;
+    --z-normal: 10;
+    --z-tooltip:20;
+    --z-fixed: 30;
+    --z-modal: 40;
+
+    --font-size:16px;
+    --main-font:'Roboto';
+    --main-alternate-font: 'Montserrat';
+    --main-font-default: sans-serif;
+};
+
+// Pensando Movil First    =>  16:9  tiene  (1366 * 768)  - (1920 * 1080) - (1600 * 900)
+$breakpoints: (
+    small: 0px,
+    medium: 425px,
+    large: 992px,
+    xlarge: 1200px
+);
+
+$fonts: (
+    title1: 50px 60px,
+    title2: 32px 40px,
+    base: 20px 30px,
+    small : 16px 22px,
+    smaller: 12px 18px
+);
+
+$themeBlack: (
+    background: #12181B,
+    navbar    : #2A2D34,
+    card      : #2A2E35,
+    icons     : #B2BECD,
+    nav       :  #22303A,
+    buttonsSuccess    : #09C372,
+    buttonsDanger     : #FA8142,
+    text	          : #B2BECD
+);
+
+$themeWhite: (
+    background: #FFFFFF,
+    navbar    : #D9DEE5,
+    card      : #DBE1E8,
+    icons     : #454E56,
+    nav       :#22303A,
+    buttonsSuccess    : #09C372,
+    buttonsDanger     : #FA8142,
+    text	          : #454E56
+);
+
+
+// Navbar o Sidebar
+
+$sidebarHeight:48px;    // Navbar Height
+$sidebarWidth: 70px;    // Sidebar Ancho
+
+$fixedTheme: 70px;

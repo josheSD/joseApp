@@ -1,0 +1,110 @@
+.l-container{
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-rows:1fr;
+    background-color:themeBlack(background);
+    color: themeBlack(text);
+
+    @include mediaquery(medium){
+     grid-template-columns: $sidebarWidth calc(100% - #{$sidebarWidth});   
+     grid-template-rows: 1fr;
+    }
+
+    &__sidebar{
+        position:fixed;
+        width:100%;
+        height:$sidebarHeight;
+        background-color: themeBlack(navbar);
+        
+        @include mediaquery(medium){
+            grid-column:1/2;
+            grid-row:1/2;
+            width:$sidebarWidth;
+            height:100vh;
+        }
+    }
+
+    &__content{
+        margin-top:$sidebarHeight;
+        min-height: calc(100vh - #{$sidebarHeight});
+        grid-column:1/2;
+        grid-row:1/2;
+        padding:1.2rem;
+
+        @include mediaquery(medium){
+            min-height:100vh;
+            padding:calc(#{$fixedTheme} + 20px) 1.5rem 1.5rem 1.5rem;
+            grid-column:2/3;
+            grid-row:1/2;
+            margin-top:0px;
+        }
+    }
+}
+
+.fixed-nav{
+    position: fixed;
+    top:0;
+    right:-80%;
+    width:80%;
+    margin-top:$sidebarHeight;
+    height:calc(100vh - #{$sidebarHeight});
+    background-color:themeBlack(nav);
+    transition: right .3s;
+    z-index: var(--z-fixed);
+}
+
+.fixed-nav.show {
+    right:0;
+}
+
+.fixed-network{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    width:40px;
+    @include mediaquery(medium){
+        right:30px;
+        bottom:20px;
+        width:50px;
+    }
+
+    & img{
+        width:100%;
+    }
+}
+
+
+.fixed-theme{
+    display:none;
+    @include mediaquery(medium){
+        display:block;
+        position: fixed;
+        right:30px;
+        top:20px;
+        width:140px;
+        height:$fixedTheme;
+        background-color:themeBlack(navbar);
+        border-bottom-left-radius: 30px;
+        display:flex;
+        flex-direction: row;
+    }
+
+    & img{
+        width:50px;
+    }
+    
+}
+
+.fixed-block{
+    width:$fixedTheme;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child{
+        background-color:themeBlack(buttonsSuccess);
+        border-bottom-left-radius: 30px;
+    }
+}
+
