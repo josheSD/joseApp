@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+ul{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:1fr;
+    background-color:greenyellow;
+    height:300px;
+    align-items: center;
+}

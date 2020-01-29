@@ -1,0 +1,110 @@
+#contenedor_carga{
+    height: 100%;
+    width:100%;
+    display:flex;
+    background-color:#002978;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transition: all 1s ease;
+    z-index:10;
+}
+
+.ball-one{
+    border: 15px solid #ccc;
+    border-radius: 100%;
+    animation: ball-one-girar 1.5s linear infinite;
+}
+
+.ball-two{
+    border:15px solid #ccc;
+    border-radius: 100%;
+    margin:0px 20px;
+    animation: ball-two-girar 1.5s linear infinite;
+}
+
+.ball-tree{
+    border:15px solid #ccc;
+    border-radius: 100%;
+    margin-right:20px;
+    animation: ball-tree-girar 1.5s linear infinite;
+}
+
+.ball-four{
+    border:15px solid #ccc;
+    border-radius: 100%;
+    animation: ball-four-girar 1.5s linear infinite;
+}
+
+@keyframes ball-one-girar {
+    0% {
+        transform: translateY(30px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes ball-two-girar {
+    0% {
+        transform: translateY(15px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes ball-tree-girar {
+    0% {
+        transform: translateY(-15px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes ball-four-girar {
+    0% {
+        transform: translateY(-30px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}

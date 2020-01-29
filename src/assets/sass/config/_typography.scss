@@ -1,0 +1,9 @@
+body{
+    font-family: var(--main-font), var(--main-alternate-font), var(--main-font-default);
+}
+
+.title1{
+    @include mediaquery(small){
+        @include font(title1);
+    }
+}
