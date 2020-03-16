@@ -18,9 +18,17 @@
         </div>
 
         <div class="fixed-nav" id="nav">
-            <p>HOLA SOY NUEVO</p>
+            <div class="phone-sidebar">
+                <img (click)="routerPerfil()" id="phoneSidebar1" class="cursor" src="../../../assets/img/perfil.svg" alt="Perfil">
+                <p>Perfil</p>
+                <img (click)="routerPortafolio()" id="phoneSidebar2" class="cursor" src="../../../assets/img/maletin.svg" alt="Maletin">
+                <p>Portafolio</p>
+            </div>
         </div>
 
-        <router-outlet></router-outlet>
+        <div class="route-container" [@routeAnimation]="getDepth(myOutlet)">
+            <router-outlet #myOutlet="outlet"></router-outlet>
+        </div>
+
     </div>
 </div>

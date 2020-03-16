@@ -71,3 +71,20 @@
         margin-top:10px;
     }
 }
+
+//Size ->SmarhPhone
+.phone-sidebar{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-columns:100px 1fr;
+    grid-template-rows:100px 100px;
+    align-items: center;
+
+    & img{
+        width:60px;
+        justify-self: center;
+    }
+}
+
+

@@ -7,11 +7,11 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'tutorial', component: TutorialComponent},
-  {path: 'portafolio', component: BriefcaseComponent},
-  {path: 'perfil', component: ProfileComponent},
-  {path: '**', component: NotFoundPageComponent}
+  {path: '', component: HomeComponent,data:{depth:1}},
+  {path: 'tutorial', component: TutorialComponent,data:{depth:2}},
+  {path: 'portafolio', component: BriefcaseComponent,data:{depth:3}},
+  {path: 'perfil', component: ProfileComponent,data:{depth:4}},
+  {path: '**', component: NotFoundPageComponent,data:{depth:5}}
 ];
 
 @NgModule({

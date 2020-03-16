@@ -20,4 +20,30 @@ window.onload  = function(){
             search.classList.toggle('show');
         });
     }
+
+    //Size -> Phone Sidebar 
+
+    let phoneSidebar1 = document.getElementById('phoneSidebar1'),
+        phoneSidebar2 = document.getElementById('phoneSidebar2');
+
+    if(phoneSidebar1){
+
+        phoneSidebar1.addEventListener('click',()=>{
+            nav.classList.toggle('show');
+        });
+
+    }
+
+    if(phoneSidebar2){
+
+        phoneSidebar2.addEventListener('click',()=>{
+            nav.classList.toggle('show');
+        });
+
+    }
+
+
+
 };
+
+

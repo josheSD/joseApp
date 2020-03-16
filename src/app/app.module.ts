@@ -10,6 +10,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { TutorialComponent } from './components/tutorial/tutorial.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
+    BrowserAnimationsModule,
     RouterModule
   ],
   providers: [],
