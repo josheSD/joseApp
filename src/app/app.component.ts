@@ -1,3 +1,4 @@
+import { SeoService } from './services/seo.service';
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, group, query,style, animate } from '@angular/animations';
 import { RouterOutlet, Router } from '@angular/router';
@@ -34,14 +35,16 @@ export class AppComponent implements OnInit{
   title = 'joseApp';
 
   constructor(
-    private router: Router
+    private router: Router,
+    private _seoService: SeoService
   ){
 
   }
 
   ngOnInit(
+  
   ){
-
+    this._seoService.generateTags();
   }
 
   getDepth(outlet: RouterOutlet){
@@ -49,7 +52,7 @@ export class AppComponent implements OnInit{
   }
   
   chatWhatsApp(){
-    let url =  "https://api.whatsapp.com/send?phone=51953235885&text=Hola tengo algunas preguntas";
+    let url =  "https://api.whatsapp.com/send?phone=51953235885&text=Buenos días Jose";
     window.open(url,"_blank");
   }
 

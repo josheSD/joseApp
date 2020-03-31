@@ -1,0 +1,31 @@
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-gap:20px;
+
+    @include mediaquery(large){
+        grid-template-columns:repeat(3,1fr);
+        grid-gap:30px;
+    }
+}
+
+
+.card{
+    background-color:white;
+    border-radius:5px;
+
+    &__title{
+        padding:13px 8px;
+    }
+
+    & img{
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    & h4{
+        color:black;
+    }
+}

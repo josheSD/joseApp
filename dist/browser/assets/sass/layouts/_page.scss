@@ -33,7 +33,6 @@
 
         @include mediaquery(medium){
             min-height:100vh;
-            padding:calc(#{$fixedTheme} + 20px) 1.5rem 1.5rem 1.5rem;
             grid-column:2/3;
             grid-row:1/2;
             margin-top:0px;
@@ -62,6 +61,7 @@
     right:10px;
     bottom:10px;
     width:40px;
+    z-index: var(--z-fixed);
     @include mediaquery(medium){
         right:30px;
         bottom:20px;
@@ -76,6 +76,7 @@
 
 .fixed-theme{
     display:none;
+    z-index:var(--z-fixed);
     @include mediaquery(medium){
         display:block;
         position: fixed;
@@ -102,9 +103,109 @@
     align-items: center;
     justify-content: center;
 
+
     &:first-child{
         background-color:themeBlack(buttonsSuccess);
         border-bottom-left-radius: 30px;
     }
+}
+
+
+// 31/03/2019
+
+.l-wrapper{
+    padding-top:40px;
+
+    & h2{
+        text-align: center;
+        margin:10px 0px;
+
+        @include mediaquery(large){
+            margin:30px 0px;
+        }
+    }
+}
+
+.fondo{
+    min-height: 85vh;
+    background-repeat: no-repeat;
+    background-size:150px;
+    background-position-x: center;
+    background-position-y:40%;
+
+    @include mediaquery(805px){
+        background-position-x: 85%;
+        background-position-y:40%;
+        background-size:300px;
+    }
+}
+
+
+.parrafo{
+    font-weight: 400;
+    font-size:12px;
+    letter-spacing: 3px;
+    color:#686868;
+    padding-left:75px;
+
+    &.historia{
+        line-height: 20px;
+        letter-spacing: 1px;
+        font-size:12px;
+        font-family: 'Roboto';
+    }
+
+    & span{
+        display:none;
+    }
+
+    @include mediaquery(large){
+        padding-left:0px;
+
+        & span{
+            display:inline-block;
+        }
+
+        &.historia{
+            line-height: 20px;
+            font-size:14px;
+        }
+    }
+
+}
+
+.title{
+    color:white;
+    font-size:25px;
+    line-height: 25px;
+    padding-left:75px;
+
+
+    & div{
+        color:#FD1056;
+        display:inline-block
+    }
+
+    & span{
+        display:none;
+    }
+
+    @include mediaquery(large){
+        padding-left:0px;
+        font-size:60px;
+        line-height: 60px;
+
+        & span{
+            display:inline-block;
+        }
+    }
+}
+
+.body-top{
+    padding-bottom:80px;
+}
+
+.body-bottom{
+    padding-top:80px;
 }
 
