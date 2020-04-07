@@ -1,8 +1,12 @@
 .cards{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr;
     grid-template-rows: auto;
     grid-gap:20px;
+
+    @include mediaquery(medium){
+        grid-template-columns:repeat(2,1fr);
+    }
 
     @include mediaquery(large){
         grid-template-columns:repeat(3,1fr);
